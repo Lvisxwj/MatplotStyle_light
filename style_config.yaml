@@ -1,0 +1,159 @@
+
+# ============================
+# 全局可视化样式配置文件
+# # NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW
+# ============================
+
+# ---------- 字体设置 ----------
+font:
+  Chinese: SimHei                     # 主字体（支持中文）
+
+  # family: SimHei
+  family: "centurygothic_bold"        # CenturyGothic_fav
+  TimesNewRoman: "Times New Roman"
+  # fallback: [DejaVu Sans, Arial Unicode MS]  # 备用字体列表
+  fallback: []
+  size: 12                           # 坐标轴标签和刻度字体大小
+  weight: bold                       # 字体粗细，normal / bold 等
+  title_size: 14                     # 标题字体大小
+  title_weight: bold                # 标题字体粗细
+
+# ---------- 图形大小 ----------
+figure:
+  figsize: [12, 8]                   # matplotlib 图形默认尺寸 (宽, 高)
+
+# ---------- 颜色方案 ----------
+colors:
+  DeepPurple: "#592E83"             # 深紫
+  GutsyFuchsia: "#D72657"           # 胆量洋红（GUTS）
+  MelancholyLavender: "#A288E3"     # 忧郁薰衣草（SOUR）
+  Blue: "#2E86AB"                   # 深蓝
+  PurpleRed: "#A23B72"              # 紫红
+  ClaudeOringe: "#F18F01"           # 橙色
+  Red: "#C73E1D"                    # 红色
+  SadGirlBlue: "#4A6FA5"            # 悲伤女孩蓝（情绪色）
+  Peach: "#FFADAD"                  # Instagram常用暖粉，温柔清新
+  SkyBlue: "#89CFFD"                # 清澈天蓝，青春洋溢
+  RetroLilac: "#B084CC"             # 复古丁香紫
+  VinylBlack: "#1B1B1E"             # 黑胶黑，适合用于文字/线条
+
+# ---------- 线条风格 ----------
+line_styles:
+  Solid: "-"                        # 实线
+  Dashed: "--"                      # 虚线
+  DashDot: "-."                     # 点划线
+  Dotted: ":"                       # 点线
+
+# ---------- 图例设置 ----------
+legend:
+  title: "What's title?"                   # 图例标题
+  loc: "upper right"                # 图例位置，例如 upper right / best / lower left
+  frameon: true                     # 是否显示图例边框
+  fancybox: true                    # 是否使用圆角边框
+  shadow: true                      # 是否添加阴影
+  title_fontsize: 11               # 图例标题字体大小
+  fontsize: 12                      # 图例内容字体大小
+
+# ---------- 网格设置 ----------
+grid:
+  # visible: true                     # 是否显示网格
+  alpha: 0.3                        # 网格透明度
+  linewidth: 0.5                    # 网格线宽
+  linestyle: "-"                    # 网格线型（参考 line_styles）
+
+# ---------- 基准线（如 x=0） ----------
+baseline:
+  # show: true                        # 是否显示基准线（x=0）
+  # color: "gray"                     # 颜色
+  alpha: 0.5                        # 透明度
+  linewidth: 1                      # 线宽
+  linestyle: "-"                    # 线型（参考 line_styles）
+
+# ---------- 热力图设置 ----------
+heatmap:
+  cmap: "flare"                    # 色图方案，可选："coolwarm"、"viridis" 等
+  annot: true                       # 是否显示单元格数值
+  fmt: ".1f"                        # 数值格式（小数位）
+  linewidths: 0.5                   # 单元格间隔线宽
+
+# ---------- 柱状图设置 ----------
+barplot:
+  saturation: 0.8                   # 颜色饱和度（0~1）
+  errorbar: "sd"                    # 错误线类型："sd"（标准差）/ "ci"（置信区间）/ null
+  dodge: true                       # 是否分组展示柱（分开堆叠）
+
+# ---------- 散点图设置 ----------
+scatterplot:
+  s: 50                             # 点大小
+  alpha: 0.8                        # 点透明度
+  edgecolor: "VinylBlack"           # 点边缘颜色
+
+# ---------- 箱线图设置 ----------
+boxplot:
+  linewidth: 1.5                    # 箱体边框线宽
+  fliersize: 3                      # 异常值（outlier）点大小
+  whis: 1.5                         # 箱须范围（1.5倍 IQR）
+  notch: false                      # 是否有缺口
+  showcaps: true                    # 是否显示上下须帽
+
+# ---------- 小提琴图设置 ----------
+violinplot:
+  linewidth: 1.2                    # 边缘线宽
+  inner: "box"                      # 内部展示："box" / "stick" / "point" / "quartile" / null
+  cut: 0                            # 控制 violin 尾部延伸长度
+  scale: "width"                    # 尺度方式："area" / "count" / "width"
+  bw: 0.2                           # 内核密度平滑参数（越小越尖锐）
+
+# new
+# ---------- 直方图设置 ----------
+hist:
+  bins: 30                            # 箱数
+  alpha: 0.7                          # 透明度
+  edgecolor: "VinylBlack"             # 边框颜色（允许固定黑边，不影响填充色）
+
+# ---------- 区域填充设置 ----------
+fill_between:
+  alpha: 0.3                          # 填充透明度
+
+# ---------- 参考线设置 ----------
+axline:
+  linestyle: "--"                     # 线型
+  alpha: 0.5                          # 透明度
+  linewidth: 1.5                        # 线宽
+
+# ---------- 饼图设置 ----------
+pie:
+  startangle: 90                      # 起始角度（默认从90度开始，即竖直向上）
+  autopct: "%.1f%%"                   # 显示百分比格式
+  pctdistance: 0.6                    # 百分比标签与圆心的距离
+  labeldistance: 1.1                  # 标签与圆心的距离
+  explode: []                         # 爆炸（分裂）参数，默认为空
+  shadow: false                       # 是否显示阴影
+  radius: 1.0                         # 饼图半径
+
+# ---------- 颜色条 (colorbar) ----------
+colorbar:
+  shrink: 0.8          # 缩放比例
+  aspect: 20           # 长宽比
+  pad: 0.05            # 与图的间距
+  labelsize: 10        # 标签字体大小
+
+# ---------- 极坐标图 (polarplot) ----------
+polarplot:
+  linewidth: 2         # 线宽
+  alpha: 0.9           # 透明度
+  linestyle: "-"       # 线型
+  marker: "o"          # 点标记
+
+# ---------- 雷达图 (radarchart) ----------
+radarchart:
+  linewidth: 2         # 线宽
+  fill_alpha: 0.6      # 填充透明度
+  linestyle: "-"       # 线型
+  fill: true           # 是否填充区域
+
+defaults:
+  linewidth: 2.5
+  alpha: 0.9
+
+
