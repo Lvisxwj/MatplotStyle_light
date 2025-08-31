@@ -173,3 +173,4 @@ MIT License.
 ## 🙌 Contributing
 Found a bug or want to add new plot types?  
 Fork this repo, create a branch, and submit a pull request!
+I am but a noob, so bugs are everywhere :) 
